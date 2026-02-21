@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GlowCare - Skincare Store</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">GlowCare</a>
+        <a href="login.html" class="btn btn-light btn-sm">Login</a>
+
+        <div class="ms-auto text-white">
+             Cart: <span id="cart-count">0</span>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="container text-center my-4 hero-bg">
+    <h2>Natural Skincare Products</h2>
+    <p>Glow Naturally with Our Premium Products</p>
+</div>
+
+<!-- Filter Buttons -->
+<div class="container text-center mb-4">
+    <button class="btn btn-outline-dark filter-btn" onclick="filterProducts('all')">All</button>
+    <button class="btn btn-outline-dark filter-btn" onclick="filterProducts('Dry')">Dry Skin</button>
+    <button class="btn btn-outline-dark filter-btn" onclick="filterProducts('Oily')">Oily Skin</button>
+    <button class="btn btn-outline-dark filter-btn" onclick="filterProducts('Combination')">Combination</button>
+</div>
+
+<!-- Product Section -->
+<div class="container">
+    <div class="row" id="product-list">
+        <!-- Products inserted by JS -->
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 GlowCare Skincare | All Rights Reserved
+</footer>
+
+<!-- External JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

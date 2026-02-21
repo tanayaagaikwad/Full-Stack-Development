@@ -1,0 +1,48 @@
+ /* Background and font */
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* ID selector for heading */
+        #mainHeading {
+            color: darkblue;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* Class selector for paragraph */
+        .intro {
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Table styling (same as before) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        caption {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+        }

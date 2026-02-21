@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCCOE College</title>
+
+    <style>
+        /* ---------- GLOBAL ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        /* ---------- NAVBAR (FLEXBOX) ---------- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #003366;
+            padding: 15px 30px;
+        }
+
+        #college-name {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* ---------- HERO SECTION ---------- */
+        .hero {
+            text-align: center;
+            padding: 40px;
+            background-color: #e6eef7;
+        }
+
+        .hero h1 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        /* ---------- INFO CARDS (BOX MODEL) ---------- */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        /* ---------- BUTTON (ANIMATION) ---------- */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0055aa;
+            animation: pulse 0.5s;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #003366;
+            color: white;
+        }
+
+        /* ---------- RESPONSIVE DESIGN ---------- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div id="college-name">PCCOE – Pimpri Chinchwad College of Engineering</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Departments</a>
+            <a href="#">Admissions</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Welcome to PCCOE</h1>
+        <p>Empowering students through quality education, innovation, and research.</p>
+    </section>
+
+    <!-- INFORMATION SECTION -->
+    <section class="cards">
+        <div class="card">
+            <h3>About PCCOE</h3>
+            <p>
+                Pimpri Chinchwad College of Engineering is a premier institute
+                known for academic excellence and industry-oriented education.
+            </p>
+            <a class="btn" href="#">Read More</a>
+        </div>
+
+        <div class="card">
+            <h3>Departments</h3>
+            <p>
+                We offer undergraduate and postgraduate programs in Engineering,
+                Technology, and Applied Sciences.
+            </p>
+            <a class="btn" href="#">View Departments</a>
+        </div>
+
+        <div class="card">
+            <h3>Placements</h3>
+            <p>
+                PCCOE has a strong placement cell with excellent opportunities
+                in leading companies.
+            </p>
+            <a class="btn" href="#">Placement Info</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Pimpri Chinchwad College of Engineering | Pune
+    </footer>
+
+</body>
+</html>
