@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AQI Dashboard — Global Air Quality Monitor</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <h1>Air Quality Monitor</h1>
+            <p>Global AQI Dashboard · 12 cities · April 2026</p>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span>Live</div>
+    </div>
+
+    <!-- AQI Scale -->
+    <div class="aqi-scale">
+        <div class="aqi-scale-seg" style="background:#3b6d11;"></div>
+        <div class="aqi-scale-seg" style="background:#639922;"></div>
+        <div class="aqi-scale-seg" style="background:#ba7517;"></div>
+        <div class="aqi-scale-seg" style="background:#d85a30;"></div>
+        <div class="aqi-scale-seg" style="background:#e24b4a;"></div>
+        <div class="aqi-scale-seg" style="background:#7f77dd;"></div>
+        <div class="aqi-scale-seg" style="background:#4f3a7a;"></div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="metrics">
+        <div class="metric-card">
+            <div class="metric-label">Global avg AQI</div>
+            <div class="metric-value" style="color:#d85a30;">87</div>
+            <div class="metric-sub">▲ 4 pts vs yesterday</div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-label">Unhealthy cities</div>
+            <div class="metric-value" style="color:#e24b4a;">5</div>
+            <div class="metric-sub">Out of 12 monitored</div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-label">Cleanest today</div>
+            <div id="cleanest-val" class="metric-value">-</div>
+            <div id="cleanest-sub" class="metric-sub">-</div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-label">Most polluted</div>
+            <div id="polluted-val" class="metric-value">-</div>
+            <div id="polluted-sub" class="metric-sub">-</div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="main-grid">
+        <div class="card">
+            <div class="card-title">24-hour AQI trend</div>
+            <canvas id="trendChart"></canvas>
+        </div>
+
+        <div class="card">
+            <div class="card-title">City AQI ranking</div>
+            <div id="city-ranks"></div>
+        </div>
+    </div>
+
+    <div class="bottom-grid">
+        <div class="card">
+            <div class="card-title">Pollutant breakdown — Delhi</div>
+            <canvas id="pollutantChart"></canvas>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Monthly avg AQI 2025 — Delhi</div>
+            <canvas id="monthlyChart"></canvas>
+        </div>
+
+        <div class="card">
+            <div class="card-title">AQI category distribution</div>
+            <canvas id="categoryChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="card">
+        <div class="card-title">All cities — current readings</div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>AQI</th>
+                    <th>PM2.5</th>
+                    <th>PM10</th>
+                    <th>NO₂</th>
+                    <th>Category</th>
+                    <th>Trend</th>
+                </tr>
+            </thead>
+            <tbody id="city-table"></tbody>
+        </table>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
